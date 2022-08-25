@@ -12,7 +12,7 @@ const onCreate = ()=>{
   
   destroyBoxes();
   for(let i = 0; i < controls.querySelector("input").value; i++){
-    let box = `<div class="box" style =" display: block; width: ${30+boxes.length*10}px; height: ${30+boxes.length*10}px; background-color: ${getRandomHexColor()}" >${boxes.length}</div>`
+    let box = `<div class="box" style =" display: block; width: ${30+boxes.length*10}px; height: ${30+boxes.length*10}px; background-color: ${getRandomHexColor()}" ></div>`
     boxes.push(box);
     
   }
@@ -28,6 +28,6 @@ const destroyBoxes = ()=>{
     div.removeChild(div.lastChild);
   }
 }  
- 
+
 create.addEventListener("click", onCreate)
 destroy.addEventListener("click", destroyBoxes)

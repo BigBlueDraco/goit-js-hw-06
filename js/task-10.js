@@ -9,13 +9,14 @@ function getRandomHexColor() {
 }
 
 const onCreate = ()=>{
-  
-  destroyBoxes();
+  let tmpBoxes =[...boxes];
   for(let i = 0; i < controls.querySelector("input").value; i++){
-    let box = `<div class="box" style =" display: block; width: ${30+boxes.length*10}px; height: ${30+boxes.length*10}px; background-color: ${getRandomHexColor()}" ></div>`
-    boxes.push(box);
+    let box = `<div class="box" style =" display: block; width: ${30+tmpBoxes.length*10}px; height: ${30+tmpBoxes.length*10}px; background-color: ${getRandomHexColor()}" ></div>`
+    tmpBoxes.push(box);
     
   }
+  destroyBoxes();
+  boxes = [...tmpBoxes]
   div.insertAdjacentHTML("beforeend", boxes.join(""))
 }
 
@@ -23,7 +24,6 @@ const destroyBoxes = ()=>{
   console.log(boxes.length)
   let arrayLength =boxes.length;
   for(let i = 0; i < arrayLength; i++){
-    console.log(i)
     boxes.pop();
     div.removeChild(div.lastChild);
   }

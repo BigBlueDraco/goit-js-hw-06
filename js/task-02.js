@@ -10,5 +10,4 @@ const ingredients = [
 const ingredientsList = document.getElementById("ingredients");
 const listItems = ingredients.map((ingredient) => `<li class="item">${ingredient}</li>`).join("");
 
-ingredientsList.innerHTML = listItems;
-
+ingredientsList.insertAdjacentHTML("afterbegin", listItems )

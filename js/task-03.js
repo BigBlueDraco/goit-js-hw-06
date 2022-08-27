@@ -14,10 +14,11 @@ const images = [
 ];
 const gallery = document.querySelector(".gallery")
 const galleryItems = images.map(image => `<li><img src="${image.url}" alt="${image.alt}" width="300px" height ="150px"></li>`).join("")
+//не зрозумыв як дуструктеризувати 
 gallery.style.display = "flex"
 gallery.style.gap ="15px"
 gallery.style.listStyle = "none"
 gallery.style.justifyContent = "center"
 gallery.style.alignItems ="center"
-console.log(gallery)
+
 gallery.insertAdjacentHTML("beforeend", galleryItems)

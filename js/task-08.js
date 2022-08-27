@@ -3,11 +3,11 @@ const loginForm = document.querySelector(".login-form")
 const onSubmit = (event) => {
     event.preventDefault();
     let {email = undefined, password = undefined} = event.target.elements
-    if(email.value != '' || password.value != '')
+    if(email.value != '' && password.value != '')
     {
         console.log({
             email: email.value,
-            password: email.value
+            password: password.value
         })
         loginForm.reset();
         return

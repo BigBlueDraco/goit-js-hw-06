@@ -15,4 +15,3 @@ const incrementClick = () => {
 counter.textContent = counterValue;
 decrement.addEventListener("click", decrementClick)
 increment.addEventListener("click", incrementClick)
-console.log(decrement.textContent)

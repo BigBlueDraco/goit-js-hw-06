@@ -3,10 +3,14 @@ function getRandomHexColor() {
 }
 
 const onClickChangeBtn = () =>{
-  body.style.backgroundColor = getRandomHexColor();
+  let hexColor = getRandomHexColor()
+  body.style.backgroundColor = hexColor ;
+  color.textContent = hexColor;
 }
 
 
 const body = document.querySelector("body");
+const color = document.querySelector(".color")
 const changeBtn = document.querySelector(".change-color")
 changeBtn.addEventListener('click', onClickChangeBtn)
+

@@ -5,7 +5,7 @@ const onValidBlur = (event) =>{
     let inputLenght = event.target.value.length 
     validInput.classList.remove("valid")
     validInput.classList.add("invalid")
-    if(inputLenght> validLenght){
+    if(inputLenght => validLenght){
         validInput.classList.remove("invalid")
         validInput.classList.add("valid")
     }

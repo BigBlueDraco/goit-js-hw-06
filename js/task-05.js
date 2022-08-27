@@ -2,10 +2,17 @@ const inputName = document.querySelector("#name-input")
 const outputName = document.querySelector("#name-output")
 
 const onInput = (event) =>{
-    outputName.textContent = event.target.value
-    if(event.target.value == "Слава Україні"){ //Не баг а фіча)))
-        outputName.textContent = "=^.^= Героям Слава =^.^="
-    }
+    switch (event.target.value){
+        case "": 
+            outputName.textContent = "Anonymous";
+        return;
+        case "Слава Україні" : 
+            outputName.textContent = "=^.^= Героям Слава =^.^=";
+        return;
+        default: 
+            outputName.textContent = event.target.value ;
+        return;
+    }    
 }
 
 inputName.addEventListener("input", onInput)

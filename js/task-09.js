@@ -3,7 +3,7 @@ function getRandomHexColor() {
 }
 
 const onClickChangeBtn = () =>{
-  let hexColor = getRandomHexColor()
+  const hexColor = getRandomHexColor()
   body.style.backgroundColor = hexColor ;
   color.textContent = hexColor;
 }
